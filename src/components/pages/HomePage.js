@@ -1,26 +1,27 @@
 import { Grid, Typography, Card, CardMedia, CardContent } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import HomePageDetails from "./HomePageDetails";
 
 const images = [
   {
-    src: require("../images/2.jpg"),
+    src: require("../../images/heroImages/2.jpg"),
     text: "The magic of growth, unfolding before us",
   },
   {
-    src: require("../images/4.jpg"),
+    src: require("../../images/heroImages/4.jpg"),
     text: "Fields of green, where dreams are made",
   },
   {
-    src: require("../images/5.jpg"),
+    src: require("../../images/heroImages/5.jpg"),
     text: "A field of strength, in every flowers",
   },
   {
-    src: require("../images/6.jpg"),
+    src: require("../../images/heroImages/6.jpg"),
     text: "The promise of growth, in every new seedling",
   },
 ];
 
-const Hero = () => {
+const HomePage = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const Hero = () => {
             <Typography variant="h3" color="#fff">
               {images[imageIndex].text}
             </Typography>
+            <HomePageDetails />
           </CardContent>
         </Card>
       </Grid>
@@ -51,4 +53,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomePage;
